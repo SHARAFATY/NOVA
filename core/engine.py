@@ -178,7 +178,8 @@ class NovaEngine:
         name = self.brain.get_preference('user_name', 'friend')
         system_prompt = (
             f"You are NOVA, a helpful Linux AI assistant. Respond to the user's requests, including Linux commands, questions, and general conversation. "
-            f"If the user asks for a command, provide the answer or the command to run. The user's name is {name}."
+            f"If the user asks for a command, provide the answer or the command to run. The user's name is {name}. "
+            "Please keep your responses short and concise (1-2 sentences), unless the user asks for more detail."
         )
         ollama_reply = self.ollama.generate(command, system=system_prompt)
         result = {"status": "ok", "message": friendly_reply(ollama_reply)}

@@ -10,6 +10,7 @@ except ImportError:
 class TextToSpeech:
     def __init__(self):
         self.use_rhvoice = rhvoice_available
+        self.speaking = False
         if self.use_rhvoice:
             self.tts = RHVoice()
             # Use a female English voice if available
@@ -27,11 +28,22 @@ class TextToSpeech:
         # For more natural speech, consider using Coqui TTS (https://github.com/coqui-ai/TTS)
 
     def speak(self, text):
+        self.speaking = True
         if self.use_rhvoice:
             self.tts.say(text, voice=self.voice)
         else:
             self.engine.say(text)
             self.engine.runAndWait()
+        self.speaking = False
+
+    def stop(self):
+        if self.use_rhvoice:
+            # RHVoice python wrapper does not have a stop method, so this is a placeholder
+            # If you use a different TTS engine, implement interruption here
+            pass
+        else:
+            self.engine.stop()
+        self.speaking = False
 
 # Singleton instance for global use
 _tts = None
