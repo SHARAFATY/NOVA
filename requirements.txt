@@ -1,0 +1,5 @@
+PyQt6
+psutil
+pyttsx3
+requests
+vosk 
