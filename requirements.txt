@@ -8,4 +8,5 @@ rhvoice-wrapper
 pynput
 rapidfuzz
 sentence-transformers
-torch 
+torch
+python-dateutil 

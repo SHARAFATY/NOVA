@@ -1,92 +1,88 @@
 {
-  "history": [
-    {
-      "command": "open terminal",
-      "time": "2025-07-17 19:02:34.002806"
-    },
-    {
-      "command": "open terminal",
-      "time": "2025-07-17 19:02:44.501027"
-    },
-    {
-      "command": "what is time",
-      "time": "2025-07-17 19:03:03.483074"
-    },
-    {
-      "command": "what is time",
-      "time": "2025-07-17 19:03:06.208040"
-    },
-    {
-      "command": "what is time",
-      "time": "2025-07-17 19:03:07.102106"
-    },
-    {
-      "command": "what is timw",
-      "time": "2025-07-17 19:05:09.258698"
-    },
-    {
-      "command": "what's time?",
-      "time": "2025-07-17 19:05:21.954822"
-    },
-    {
-      "command": "help",
-      "time": "2025-07-17 19:09:04.818402"
-    },
-    {
-      "command": "helo",
-      "time": "2025-07-17 19:18:55.032610"
-    },
-    {
-      "command": "what's time?",
-      "time": "2025-07-17 19:19:09.175811"
-    },
-    {
-      "command": "what time is it",
-      "time": "2025-07-17 19:36:03.570457"
-    },
-    {
-      "command": "sean your logs logs",
-      "time": "2025-07-17 19:36:35.834654"
-    },
-    {
-      "command": "watch watch diaries or is it did",
-      "time": "2025-07-17 19:37:04.343661"
-    },
-    {
-      "command": "what what the time he time is is it it",
-      "time": "2025-07-17 19:37:27.342271"
-    },
-    {
-      "command": "open firefox",
-      "time": "2025-07-17 19:52:55.315414"
-    },
-    {
-      "command": "hope open fire fire fire for fox",
-      "time": "2025-07-17 19:52:56.362773"
-    },
-    {
-      "command": "open firefox",
-      "time": "2025-07-17 19:53:13.847654"
-    },
-    {
-      "command": "hope open fire fire fire for fox",
-      "time": "2025-07-17 19:53:17.811880"
-    },
-    {
-      "command": "how are you",
-      "time": "2025-07-17 20:03:22.334194"
-    },
-    {
-      "command": "hope open fire firefox",
-      "time": "2025-07-17 20:03:46.831594"
-    },
-    {
-      "command": "how are you",
-      "time": "2025-07-17 20:03:56.696853"
-    },
-    {
-      "command": "open firefox",
-      "time": "2025-07-17 20:04:04.944041"
-    }
-  ]
+  "failed_attempts": 0,
+  "habits": {
+    "hello know why": [
+      "2025-07-17T23:43:45.424478"
+    ],
+    "okay so what's the time": [
+      "2025-07-17T23:44:00.457432"
+    ],
+    "open firefox": [
+      "2025-07-17T23:44:18.692078"
+    ],
+    "no i don't wear and teach you anything": [
+      "2025-07-17T23:44:34.074067"
+    ],
+    "hello": [
+      "2025-07-17T23:56:55.671943",
+      "2025-07-18T00:05:14.891507"
+    ]
+  },
+  "counter": {
+    "hello know why": 1,
+    "okay so what's the time": 1,
+    "open firefox": 1,
+    "no i don't wear and teach you anything": 1,
+    "hello": 2
+  },
+  "recent_commands": [
+    [
+      "hello know why",
+      "2025-07-17T23:43:45.424478"
+    ],
+    [
+      "okay so what's the time",
+      "2025-07-17T23:44:00.457432"
+    ],
+    [
+      "open firefox",
+      "2025-07-17T23:44:18.692078"
+    ],
+    [
+      "no i don't wear and teach you anything",
+      "2025-07-17T23:44:34.074067"
+    ],
+    [
+      "hello",
+      "2025-07-17T23:56:55.671943"
+    ],
+    [
+      "hello",
+      "2025-07-18T00:05:14.891507"
+    ]
+  ],
+  "conversation_history": [
+    [
+      "2025-07-17T23:43:45.424478",
+      "hello know why",
+      "Happy to help! I want to help, but I didn't quite get that. If you want to teach me something new, just say so!"
+    ],
+    [
+      "2025-07-17T23:44:00.457432",
+      "okay so what's the time",
+      "No problem! I want to help, but I didn't quite get that. Would you like some examples of what I can do, friend? (Last thing I heard: 'hello know why')"
+    ],
+    [
+      "2025-07-17T23:44:18.692078",
+      "open firefox",
+      "Happy to help! Sorry, I didn't catch that. Could you repeat? (Last thing I heard: 'okay so what's the time')"
+    ],
+    [
+      "2025-07-17T23:44:34.074067",
+      "no i don't wear and teach you anything",
+      "Here's the info: Hmm, that didn't sound like a command I know. Want an example? Would you like some examples of what I can do, friend? (Last thing I heard: 'open firefox') You can ask me to open programs, run scans, or just chat!"
+    ],
+    [
+      "2025-07-17T23:56:55.671943",
+      "hello",
+      "No problem! [Ollama did not respond]"
+    ],
+    [
+      "2025-07-18T00:05:14.891507",
+      "hello",
+      "Alright! [Ollama did not respond]"
+    ]
+  ],
+  "user_preferences": {},
+  "skills": []
 }
