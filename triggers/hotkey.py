@@ -1,12 +1,22 @@
+from pynput import keyboard as pynput_keyboard
+import threading
+
 class HotkeyListener:
-    def __init__(self, hotkey="ctrl+;"):
+    def __init__(self, hotkey="<ctrl>+;", on_hotkey=None):
         self.hotkey = hotkey
-        # Placeholder for hotkey registration
+        self.on_hotkey = on_hotkey
+        self.listener = None
 
     def start(self):
-        # Start listening for the hotkey
-        pass
+        self.listener = pynput_keyboard.GlobalHotKeys({
+            self.hotkey: self._trigger
+        })
+        self.listener.start()
 
     def stop(self):
-        # Stop listening
-        pass 
+        if self.listener:
+            self.listener.stop()
+
+    def _trigger(self):
+        if self.on_hotkey:
+            self.on_hotkey() 

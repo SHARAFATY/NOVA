@@ -17,5 +17,4 @@ QLabel {
     color: #00ffe7;
     font-size: 18px;
     font-weight: bold;
-    text-shadow: 0 0 10px #00ffe7;
 } 

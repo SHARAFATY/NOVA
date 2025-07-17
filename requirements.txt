@@ -2,4 +2,10 @@ PyQt6
 psutil
 pyttsx3
 requests
-vosk 
+vosk
+sounddevice
+rhvoice-wrapper
+pynput
+rapidfuzz
+sentence-transformers
+torch 
