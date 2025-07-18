@@ -1,6 +1,6 @@
 import os
 
-NOVA_NAME = "NOVA"
+TOVA_NAME = "TOVA"
 MEMORY_PATH = os.path.join(os.path.dirname(__file__), '../memory/memory.json')
 LOGS_PATH = os.path.join(os.path.dirname(__file__), '../memory/logs/')
 VOICE = {

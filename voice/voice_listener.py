@@ -33,7 +33,7 @@ class VoiceListener:
         rec = vosk.KaldiRecognizer(self.model, self.samplerate)
         if self.set_avatar_state:
             self.set_avatar_state('listening')
-        print("[NOVA] VoiceListener: Always listening for commands...")
+        print("[TOVA] VoiceListener: Always listening for commands...")
         with sd.RawInputStream(samplerate=self.samplerate, blocksize = 8000, dtype='int16', channels=1, callback=self._audio_callback):
             while self.listening:
                 data = self.q.get()
@@ -41,7 +41,7 @@ class VoiceListener:
                     result = json.loads(rec.Result())
                     text = result.get('text', '').strip()
                     if text:
-                        print(f"[NOVA] Heard: {text}")
+                        print(f"[TOVA] Heard: {text}")
                         if self.set_avatar_state:
                             self.set_avatar_state('thinking')
                         if self.on_command:

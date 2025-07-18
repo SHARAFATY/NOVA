@@ -1,5 +1,5 @@
 from core import config
-from core.engine import NovaEngine
+from core.engine import TovaEngine
 from voice.voice_listener import VoiceListener
 from voice.text_to_speech import get_tts
 import threading
@@ -7,13 +7,13 @@ import sys
 
 
 def main():
-    engine = NovaEngine()
+    engine = TovaEngine()
     tts = get_tts()
     listener = None
     tts_lock = threading.Lock()
     
     def on_wake():
-        print("[NOVA] Wake word detected. Listening for command...")
+        print("[TOVA] Wake word detected. Listening for command...")
 
     def on_command(cmd):
         nonlocal listener
@@ -22,9 +22,9 @@ def main():
                 tts.stop()  # Interrupt current speech
             if listener:
                 listener.stop_listening()
-            print(f"[NOVA] Command: {cmd}")
+            print(f"[TOVA] Command: {cmd}")
             result = engine.handle_command(cmd)
-            print(f"[NOVA] Result: {result.get('message', str(result))}")
+            print(f"[TOVA] Result: {result.get('message', str(result))}")
             tts.speaking = True
             tts.speak(result.get("message", str(result)))
             tts.speaking = False
@@ -39,7 +39,7 @@ def main():
         while True:
             pass
     except KeyboardInterrupt:
-        print("[NOVA] Shutting down.")
+        print("[TOVA] Shutting down.")
 
 if __name__ == "__main__":
     main() 

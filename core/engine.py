@@ -160,7 +160,7 @@ def friendly_reply(text):
     prefix = random.choice(FRIENDLY_PREFIXES)
     return prefix + text
 
-class NovaEngine:
+class TovaEngine:
     def __init__(self):
         self.memory = Memory()
         self.brain = Brain(memory=self.memory)
@@ -177,7 +177,7 @@ class NovaEngine:
         command = command.strip()
         name = self.brain.get_preference('user_name', 'friend')
         system_prompt = (
-            f"You are NOVA, a helpful Linux AI assistant. Respond to the user's requests, including Linux commands, questions, and general conversation. "
+            f"You are TOVA (Tech Operative Virtual Assistant), a helpful Linux AI assistant. Respond to the user's requests, including Linux commands, questions, and general conversation. "
             f"If the user asks for a command, provide the answer or the command to run. The user's name is {name}. "
             "Please keep your responses short and concise (1-2 sentences), unless the user asks for more detail."
         )
