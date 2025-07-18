@@ -1,32 +1,49 @@
-# NOVA: Local Linux AI Assistant
+<div align="center">
+  <img src="assets/image.png" alt="NOVA Logo" width="200"/>
+</div>
 
-NOVA is a fully local, modular, sci-fi-inspired AI assistant for Linux. She controls, automates, and monitors your system with voice or keyboard activation, a glowing glass UI, and evolving intelligence.
+<div align="center">
+  <h1>NOVA: Local Linux AI Voice Assistant</h1>
+</div>
+
+NOVA is a fully local, privacy-first AI voice assistant for Linux, powered by a lightweight LLM (TinyLlama via Ollama). NOVA listens for your voice commands, answers questions, and provides Linux help—all offline, with no cloud dependencies.
 
 ## Features
-- Voice and hotkey activation
-- Floating, transparent PyQt6 UI
-- Modular tool system for system, network, files, users, and more
-- Persistent memory and logs
-- Self-evolving brain module
-- Fully offline, privacy-first
+- Voice-only activation and interaction
+- Local LLM (TinyLlama) for all responses—no hardcoded commands
+- Short, concise answers by default
+- Interruptible speech: speak at any time to stop the current response
+- Fully offline and privacy-respecting
+- Persistent memory and logs (local only)
 
 ## Installation
 1. Clone this repo
-2. `cd nova`
+2. `cd NOVA`
 3. Install dependencies: `pip install -r requirements.txt`
+4. [Install Ollama](https://ollama.com/download) and pull the TinyLlama model:
+   ```sh
+   ollama pull tinyllama
+   ollama serve &
+   ```
 
 ## Usage
-- Run with: `python nova/main.py`
-- Activate with Ctrl+; or say "Nova" (if mic enabled)
-- Type or speak commands (e.g., "restart network", "clean junk files")
+- Start NOVA:
+  ```sh
+  python main.py
+  ```
+- Speak your command or question when prompted.
+- NOVA will respond with a short answer. You can interrupt her at any time by speaking again.
 
-## Extending
-- Drop new tools in `nova/tools/custom/` — NOVA will auto-detect them
+## How It Works
+- All user input is sent to the local LLM (TinyLlama) via Ollama.
+- NOVA does not use any hardcoded command logic—everything is handled by the LLM.
+- The system prompt instructs the LLM to keep responses short and professional.
+- Voice recognition is powered by Vosk; text-to-speech uses pyttsx3 or RHVoice.
 
-## Security
-- Destructive actions require confirmation
-- Memory and logs are local and can be encrypted
+## Privacy
+- NOVA runs entirely on your machine. No data is sent to the cloud.
+- All logs and memory are stored locally and can be deleted at any time.
 
 ---
 
-*Build as if she's a living entity. NOVA is your subtle, smart, fast Linux guide.* 
+*Professional, private, and always local—NOVA is your Linux voice companion.* 
